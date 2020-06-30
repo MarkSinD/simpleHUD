@@ -11,11 +11,13 @@ public class GameEngine extends SurfaceView implements Runnable {
     public static long mFPS;
     private HUD mHUD;
     private Renderer mRenderer;
+    private SoundEngine mSoundEngine;
 
     public GameEngine(Context context, Point size){
         super(context);
         mRenderer = new Renderer( this);
         mHUD = new HUD(size);
+        mSoundEngine = new SoundEngine(context);
     }
 
     @Override
